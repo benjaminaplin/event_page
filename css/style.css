@@ -12,19 +12,19 @@ Developer @GA in NYC
 
 /* Box Model Hack */
 * {
-     -moz-box-sizing: border-box; /* Firexfox */
-     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-     box-sizing: border-box; /* IE */
+   -moz-box-sizing: border-box; /* Firexfox */
+   -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+   box-sizing: border-box; /* IE */
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
 }
 
 .clear {
@@ -46,10 +46,10 @@ Developer @GA in NYC
 /*******************************************/
 
 body {
-     color: #000;
-     font-size: 12px;
-     line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
+   color: #000;
+   font-size: 12px;
+   line-height: 1.4;
+   font-family: Helvetica, Arial, sans-serif;
 }
 
 
@@ -59,54 +59,54 @@ body {
 
 /* Center the container */
 .container {
-     margin: 0 auto;
-     padding: 5px;
+   margin: 0 auto;
+   padding: 5px;
 }
 
 .outer.container {
-     border: black 1px solid;
-     width: 960px;
-     width: 80%;
+   border: black 1px solid;
+   width: 960px;
+   width: 80%;
 }
 
 .box {
-     width: 30%;
-     height: 100px;
-     border: blue 1px solid;
-     margin: 0 auto;
-     overflow: scroll;
+   width: 30%;
+   height: 100px;
+   border: blue 1px solid;
+   margin: 0 auto;
+   overflow: scroll;
 }
 
 .top.container {
-     border: green 1px solid;
-     text-align: center;
-     margin: 10px auto;
+   border: green 1px solid;
+   text-align: center;
+   margin: 10px auto;
 }
 
 .top.container .box {
-     display: inline-block;
+   display: inline-block;
 }
 
 .middle.container {
-     border: red 1px solid;
-     text-align: center;
-     margin: 10px auto;
+   border: red 1px solid;
+   text-align: center;
+   margin: 10px auto;
 }
 
 .middle.container .box {
-     display: inline-block;
+   display: inline-block;
 }
 
 .bottom.container  {
-     height: 150px;
-     border: blue 1px solid;
-     text-align: center;
-     margin: 10px auto;
+   height: 150px;
+   border: blue 1px solid;
+   text-align: center;
+   margin: 10px auto;
 }
 
 .bottom.container .box {
-     display: inline-block;
-     float: left;
+   display: inline-block;
+   float: left;
 }
 
 /******************************************
@@ -114,28 +114,28 @@ body {
 /*******************************************/
 
 div.event-image {
-     overflow: hidden;
-     margin: 10px;
+   overflow: hidden;
+   margin: 10px;
 }
 
 div.event-image img {
-     display: block;
-     height: auto;
-     max-width: 100%;
-     -webkit-transition: all 300ms;
-     -moz-transition: all 300ms;
-     transition: all 300ms;
+   display: block;
+   height: auto;
+   max-width: 100%;
+   -webkit-transition: all 300ms;
+   -moz-transition: all 300ms;
+   transition: all 300ms;
 }
 
 div.event-image img:hover {
-     opacity: .5;
-     -webkit-transform: scale(1.4);
-     -moz-transform: scale(1.4);
-     transform: scale(1.4);
+   opacity: .5;
+   -webkit-transform: scale(1.4);
+   -moz-transform: scale(1.4);
+   transform: scale(1.4);
 }
 
 /******************************************
-/* MODAL             
+/* SLIDE SHOW             
 /*******************************************/
 
 #slide-show {
@@ -145,8 +145,7 @@ div.event-image img:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.85);
-/*  border: solid 1px red;
-*/}
+}
 
 .slide-show-content {
   height: 25px;
@@ -155,27 +154,38 @@ div.event-image img:hover {
   background-color: rgba(0, 0, 0, 0);
   top: 55px;
   width: 40%;
-/*  border: solid 1px red;
-*/}
+  border: solid 1px red;
+}
 
 .slide-show-header {
   float:right;
   background-color: rgba(0, 0, 0, 0.7);
   width: auto;
+  border: solid 1px red;
 }
 
 .slide-show-body {
+  float:right;
   position: absolute;
   width: 100%;
   top: 25px;
   background-color: rgba(0, 0, 0, 0.7);
   border-top: 2px solid rebeccapurple;
-/*  border: solid 1px red;
-*/}
+  border: solid 1px red;
+}
+
+.slide-show-footer{
+  float:right;  
+  background-color: rgba(0, 0, 0, 0);
+  width: auto;
+  display: block;
+  border: solid 1px red;
+}
+
 
 #close-slide-show {
-/* border: solid 1px red;
-*/}
+
+}
 
 
 
