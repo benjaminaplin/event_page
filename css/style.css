@@ -116,9 +116,25 @@ p {
 /* ADDITIONAL STYLES                   
 /*******************************************/
 
-.icon-PW_logo {
-     height: 101.734px;
-     width: 33px;
+div.event-image {
+     overflow: hidden;
+     margin: 10px;
+}
+
+div.event-image img {
+     display: block;
+     height: auto;
+     max-width: 100%;
+     -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+     transition: all 300ms;
+}
+
+div.event-image img:hover {
+     opacity: .5;
+     -webkit-transform: scale(1.4);
+     -moz-transform: scale(1.4);
+     transform: scale(1.4);
 }
 
 
