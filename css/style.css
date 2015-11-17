@@ -152,34 +152,43 @@ div.event-image img:hover {
   background-color: rgba(0, 0, 0, 0);
   top: 55px;
   width: 40%;
-  border: solid 1px red;
-}
+/*  border: solid 1px red;
+*/}
 
 .slide-show-header {
 /*  float:right;
   background-color: rgba(0, 0, 0, 0.7);
   width: auto;*/
-  border: solid 1px red;
-}
+/*  border: solid 1px red;
+*/}
 
 .slide-show-body {
-  float:right;
-  /*position: absolute;*/
-  height: 375px;
+ /*position: absolute;*/
   width: 100%;
   top: 25px;
   background-color: rgba(0, 0, 0, 0.7);
   border-top: 2px solid rebeccapurple;
-  border: solid 1px red;
+/*  border: solid 1px red;
+*/}
+
+.slide-show-footer {
+/*  border: solid 1px red;
+*/  padding: 20px 10px 10px 10px;
 }
 
-.slide-show-footer{
-/*  float:right;  
-  background-color: rgba(0, 0, 0, 0);
-  width: auto;
-  display: block;*/
-  border: solid 1px red;
+.slide-show-nav{
+  float: right;
 }
+
+.text-content{
+/*  border: solid 1px red;
+*/}
+
+
+#slide-show-text {
+  color: white;
+}
+
 
 #close-slide-show {
 
