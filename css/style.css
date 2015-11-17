@@ -1,10 +1,8 @@
 /* 
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
-Developer @GA in NYC
+Project Name: Event Page
+Client: PureWow
+Author: Benjamin Aplin
 */
-
 
 /******************************************
 /* SETUP                   
@@ -158,15 +156,16 @@ div.event-image img:hover {
 }
 
 .slide-show-header {
-  float:right;
+/*  float:right;
   background-color: rgba(0, 0, 0, 0.7);
-  width: auto;
+  width: auto;*/
   border: solid 1px red;
 }
 
 .slide-show-body {
   float:right;
-  position: absolute;
+  /*position: absolute;*/
+  height: 375px;
   width: 100%;
   top: 25px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -175,13 +174,12 @@ div.event-image img:hover {
 }
 
 .slide-show-footer{
-  float:right;  
+/*  float:right;  
   background-color: rgba(0, 0, 0, 0);
   width: auto;
-  display: block;
+  display: block;*/
   border: solid 1px red;
 }
-
 
 #close-slide-show {
 
