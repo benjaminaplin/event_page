@@ -134,4 +134,50 @@ div.event-image img:hover {
      transform: scale(1.4);
 }
 
+/******************************************
+/* MODAL             
+/*******************************************/
+
+#slide-show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+/*  border: solid 1px red;
+*/}
+
+.slide-show-content {
+  height: 25px;
+  position: relative;
+  margin: 0 45% 0 15%;
+  background-color: rgba(0, 0, 0, 0);
+  top: 55px;
+  width: 40%;
+/*  border: solid 1px red;
+*/}
+
+.slide-show-header {
+  float:right;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: auto;
+}
+
+.slide-show-body {
+  position: absolute;
+  width: 100%;
+  top: 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top: 2px solid rebeccapurple;
+/*  border: solid 1px red;
+*/}
+
+#close-slide-show {
+/* border: solid 1px red;
+*/}
+
+
+
+
 
