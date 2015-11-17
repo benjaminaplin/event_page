@@ -98,7 +98,7 @@ body {
 /*******************************************/
 
 .current-image{
-  height: 350px;
+  max-height: 350px;
   width: auto;
 }
 
@@ -112,21 +112,18 @@ body {
 }
 
 .slide-show-content {
-  height: 10px;
-  position: relative;
-  margin: 0 25% 0 15%;
+  /*  position: relative;
+*/  margin: 0 25% 0 15%;
   background-color: rgba(0, 0, 0, 0);
   top: 35px;
   width: 60%;
-/*  border: solid 1px red;
-*/}
+  border: solid 1px red;
+}
 
 .slide-show-header {
-/*  float:right;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: auto;*/
-/*  border: solid 1px red;
-*/}
+  width: auto;
+  border: solid 1px red;
+}
 
 .slide-show-body {
  /*position: absolute;*/
@@ -134,12 +131,12 @@ body {
   top: 25px;
   background-color: rgba(0, 0, 0, 0);
   border-top: 2px solid rebeccapurple;
-/*  border: solid 1px red;
-*/}
+  border: solid 1px red;
+}
 
 .slide-show-footer {
-/*  border: solid 1px red;
-*/  padding: 20px 10px 10px 10px;
+  padding: 20px 10px 10px 10px;
+  border: solid 1px red;
 }
 /****ICONS ***/
 .material-icons {
@@ -151,11 +148,12 @@ body {
 }
 
 i#forward-button.material-icons, i#back-button.material-icons {
-    border: 1px solid white;
+  border: 1px solid white;
   }
 
 i#close-slide-show.material-icons {
   font-size: 48px;
+  float: right;
 }
 
 /****ICONS ***/
