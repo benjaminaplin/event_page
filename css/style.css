@@ -78,40 +78,79 @@ body {
 }
 
 .social-share {
-  width: 135px;
+  width: 8.438em;
   height: auto;
 }
 .nav-bar-text {
-    font-family: 'Scheherazade', serif;
-    font-size: 21px;
-    padding: 20px 0 21px 12px;
-    border-left: 1px grey solid;
-    color: #383E3E;
-  }
+  font-family: 'Scheherazade', serif;
+  font-size: 1.313em;
+  padding: 20px 0 21px 12px;
+  border-left: 1px grey solid;
+  color: #383E3E;
+}
 
 .nav-container {
-  height: 70px;
+  height: 63px;
 }
 
 /******************************************
 /* HEADER/BANNER                  
 /*******************************************/
-#header-image {
-  position: absolute;
-  z-index: -100;
-  
-}
+
+.header-image-container {
+    background: url(../images/header-sized.jpeg);
+    background-size: 100% 100%;
+    min-height: 362px;
+    min-width: 320px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -6px;
+  }
 
 .header-text {
-  text-align: center;
+    margin: 0px 15% 0 15%;
+    position: absolute;
+    top: 100px;
+    min-width: 288px;
+    text-align: center;
+    color: #FFFFFC;
+    width: 70%;
 }
 
 .header-text h1 {
-    z-index: 100;
-    font-family: 'Scheherazade', serif;
-    color: #FFFFFC;
+  text-align: center;
+  z-index: 100;
+  font-family: 'Scheherazade', serif;
+  font-size: 6.250em;
+  letter-spacing: 0.031em;
 }
 
+.header-text h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;  
+  letter-spacing: 0.163em;
+  margin: 0 auto;
+  position: relative;
+  bottom: 23px;
+}
+
+.header-text h4 {
+  font-size: 0.688em;
+  letter-spacing: 2.6px;
+  padding-top: 25px;
+
+}
+#see-photos {
+  padding-top: 40px;
+}
+#see-photos i.material-icons {
+  color: #EDE7E4;
+  font-size: 66px;
+}
+
+#arrow-down {
+  color: #EDE7E4;
+}
 /******************************************
 /* IMAGES                  
 /*******************************************/
@@ -150,7 +189,6 @@ body {
   max-height: 350px;
   width: auto;
   padding-right: 50px;
-
 }
 
 #slide-show {
@@ -199,24 +237,22 @@ body {
 }
 
 /****SLIDE SHOW ICONS ***/
-.material-icons {
-  color: white;
-  margin-top: 10px;
-}
-
 .material-icons:hover {
   cursor: pointer;
 }
 
 i#forward-button.material-icons {
+  color: white;
   border: 1px solid white;
 }
 
 i#back-button.material-icons {
+  color: white;
   border: 1px solid white;
 }
 
 i#close-slide-show.material-icons {
+  color: white;
   font-size: 48px;
   float: right;
 }
@@ -233,8 +269,105 @@ i#close-slide-show.material-icons {
   outline: none;
 }
 
+/*MIN-WIDTH: "If [device width] is more than or equal to [specified #], then do {...}*/
 
 
+/*MAX-WIDTH: "If [device width] is less than or equal to [specified #], then do {...}*/
+
+@media only screen and (max-width: 936px)  {
+  .header-image-container {
+    min-height: 302px;
+  }
+
+  .header-text h1 {
+    font-size: 4.85em;
+    letter-spacing: 0.031em;
+  }
+
+  .header-text h3 {
+    font-size: 0.975em;  
+    padding-top: 15px;
+  }
+
+  .header-text h4 {
+    font-size: 0.688em;
+    letter-spacing: 2.6px;
+    padding-top: 25px;
+  }
+
+  #see-photos i.material-icons {
+    font-size: 3em;
+  }
+
+}
+
+@media only screen and (max-width: 725px)  {
+  .header-image-container {
+    min-height: 260px;
+  }
+
+  .header-text h1 {
+    font-size: 3.85em;
+  }
+
+  .header-text h3 {
+    font-size: 0.875em;  
+  }
+
+  .header-text h4 {
+    padding-top: 5px;
+
+  }
+
+}
+
+@media only screen and (max-width: 576px)  {
+  .header-image-container {
+    min-height: 200px;
+  }
+
+  .header-text h1 {
+    font-size: 2.75em;
+  }
+
+  .header-text h4 {
+    padding: 0;
+  }
+
+  #see-photos {
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (max-width: 432px)  {
+
+.header-text{
+      margin: 0px 5% 0 5%;
+      width: 90%;
+
+}
+
+  .header-text h1 {
+    font-size: 2.45em;
+    position: relative;
+    bottom: 30px;
+  }
+
+  .header-text  h3 {
+    padding: 0;
+  }
+
+  .header-text h3 {
+    font-size: 0.675em;  
+  }
+
+  .header-text h4 {
+    font-size: 0.675em;  
+
+  }
+
+}
 
 
 
