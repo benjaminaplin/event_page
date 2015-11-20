@@ -44,14 +44,14 @@ Author: Benjamin Aplin
 /*******************************************/
 
 body {
-   color: #000;
-   font-size: 12px;
-   line-height: 1.4;
-   font-family: Helvetica, Arial, sans-serif;
-   outline-color: rgba(0, 0, 0, 0);
-   border-color: rgba(0, 0, 0, 0);
+ color: #000;
+ font-size: 12px;
+ line-height: 1.4;
+ font-family: Helvetica, Arial, sans-serif;
+ outline-color: rgba(0, 0, 0, 0);
+ border-color: rgba(0, 0, 0, 0);
+ padding-top: 70px;
 }
-
 
 /******************************************
 /* LAYOUT                   
@@ -91,6 +91,7 @@ body {
 
 .nav-container {
   height: 63px;
+  overflow: hidden;
 }
 
 /******************************************
@@ -119,7 +120,6 @@ body {
 
 .header-text h1 {
   text-align: center;
-  z-index: 100;
   font-family: 'Scheherazade', serif;
   font-size: 6.250em;
   letter-spacing: 0.031em;
@@ -155,30 +155,63 @@ body {
 /* IMAGES                  
 /*******************************************/
 
-
-div.event-image {
-   overflow: hidden;
-   margin: 10px;
+.photo-grid {
+  margin: 1em auto;
+  max-width: 1106px;
+  text-align: center;
 }
 
-div.event-image img {
-   display: block;
-   height: auto;
-   max-width: 100%;
-   -webkit-transition: all 300ms;
-   -moz-transition: all 300ms;
-   transition: all 300ms;
+.event-image {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 1em;
+  width: 289px;
+  height: 250px;
 }
 
-div.event-image img:hover {
-   opacity: .5;
-   -webkit-transform: scale(1.4);
-   -moz-transform: scale(1.4);
-   transform: scale(1.4);
+.photo-grid img {
+  display: block;
+  height: auto;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+/*  max-width: 100%;
+*/}
+
+.event-image:hover .overlay {
+  opacity: 0.7;
 }
 
-body {
-  padding-top: 70px;
+.photo-grid .event-image:hover img {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.photo-grid .overlay {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  display: table;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
+ }
+
+footer img {
+  height: auto;
+  width: 20%;
+  margin: 0 40% 0 40%;
 }
 
 /******************************************
@@ -193,7 +226,7 @@ body {
 
 #slide-show {
   position: fixed;
-  top: 70px;
+  top: 64px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -202,38 +235,36 @@ body {
 
 .slide-show-content {
   position: relative;
-  margin: 0 25% 0 15%;
+  margin: 0 20% 0 20%;
   background-color: rgba(0, 0, 0, 0);
   top: 35px;
   width: 60%;
-  /*border: solid 1px red;*/
+  min-width: 250px;
+  max-width: 650px;
 }
 
 .slide-show-header {
   width: auto;
-  /*border: solid 1px red;*/
 }
 
 .slide-show-body {
   width: 100%;
   top: 25px;
   background-color: rgba(0, 0, 0, 0);
-  /*border: solid 1px red;*/
 }
 
 .slide-show-footer {
   padding: 20px 10px 10px 10px;
-  /*border: solid 1px red;*/
 }
 
 .slide-show-nav{
   float: right;
-  width: 11%;
+  width: 17%;
 }
 
 #slide-show-text {
   float: left;
-  width: 85%;
+  width: 65%;
 }
 
 /****SLIDE SHOW ICONS ***/
@@ -253,7 +284,7 @@ i#back-button.material-icons {
 
 i#close-slide-show.material-icons {
   color: white;
-  font-size: 48px;
+  font-size: 40px;
   float: right;
 }
 
@@ -270,10 +301,25 @@ i#close-slide-show.material-icons {
 }
 
 /*MIN-WIDTH: "If [device width] is more than or equal to [specified #], then do {...}*/
-
+@media only screen and (min-width: 1280px){
+  .header-image-container{
+    width: 85%;
+    margin: 0 7.5% 0 7.5%;
+  }
+}
 
 /*MAX-WIDTH: "If [device width] is less than or equal to [specified #], then do {...}*/
 
+@media only screen and (max-width: 875px) {
+  .slide-show-nav{
+    width: 15%;
+  }
+
+  #slide-show-text {
+    width: 80%;
+  }
+
+}
 @media only screen and (max-width: 936px)  {
   .header-image-container {
     min-height: 302px;
@@ -316,8 +362,17 @@ i#close-slide-show.material-icons {
 
   .header-text h4 {
     padding-top: 5px;
-
   }
+  
+  .slide-show-nav{
+    float: right;
+    width: 25%;
+  }
+
+  #slide-show-text {
+    float: left;
+    width: 70%;
+  }  
 
 }
 
@@ -342,11 +397,10 @@ i#close-slide-show.material-icons {
 
 @media only screen and (max-width: 432px)  {
 
-.header-text{
-      margin: 0px 5% 0 5%;
-      width: 90%;
-
-}
+  .header-text{
+    margin: 0px 5% 0 5%;
+    width: 90%;
+  }
 
   .header-text h1 {
     font-size: 2.45em;
@@ -364,7 +418,15 @@ i#close-slide-show.material-icons {
 
   .header-text h4 {
     font-size: 0.675em;  
+  }
 
+  .slide-show-content {
+    margin: 0 20% 0 10%;
+    width: 60%;
+  }
+
+  .header-image-container {
+    min-height: 170px;
   }
 
 }

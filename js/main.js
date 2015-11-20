@@ -1,19 +1,24 @@
-//Project Name: Event Page
-//Client: PureWow
-//Author: Benjamin Aplin
-//
-console.log('main.js is linked');
+// Project Name: Event Page
+// Client: PureWow
+// Author: Benjamin Aplin
 
 var currentImage;
 
-$('div.event-image img').on('click', function(e){
+console.log('main.js is linked');
+
+$('.event-image').on('click', function(e){
+  var target = $(this).find('img');
+  targetImage = target[0];
+  targetImage = targetImage.src.substring(40)
+  console.log('targetImage', targetImage)
   $('#slide-show').toggle();
-  var targetImage = $(this).attr('src');
   _.each(slideShowContent, function(e, i, l) {
+    console.log(e.smImg)
     if(e.smImg === targetImage){
+      console.log('match!')
       $('.slide-show-body').html('');
       $('.slide-show-body').append('<div  style="border: 0px solid; outline: 0;"><img  class="current-image" src="' + e.lgImg + '"></div>');
-      $('#slide-show-text').html('').append('<div>' + e.slideShowText + '</div>')   
+      $('#slide-show-text').html('').append('<div>' + e.slideShowText + '</div>');   
     }
   })
 })
@@ -39,15 +44,15 @@ var changeSlide = function(num, currentImage){
 }
 
 $('#back-button').on('click', function(){
+  console.log('wha')
   currentImage = $('.current-image').attr('src');
+  console.log('currentImage',currentImage)
   changeSlide(-1, currentImage);
 })
 
 $('#forward-button').on('click', function(){
   currentImage = $('.current-image').attr('src');
+  console.log('currentImage',currentImage)
   changeSlide(1, currentImage);
 })
 
-
-  // var currentSlideShowImage = _.findWhere(slideShowContent, {smImg: currentImage})
-  // console.log('currentSlideShowImage.lgImg', currentSlideShowImage.lgImg)
